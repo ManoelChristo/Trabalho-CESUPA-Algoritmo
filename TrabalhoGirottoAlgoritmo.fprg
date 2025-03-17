@@ -1,0 +1,1842 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TrabalhoGirottoImportanteDemaisLul"/>
+        <attribute name="authors" value="Manoel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-17 05:55:53 PM"/>
+        <attribute name="created" value="TWFub2VsO0RFU0tUT1AtRjhMS1NETDsyMDI1LTAyLTI2OzA3OjE3OjM2IEFNOzI5NjM="/>
+        <attribute name="edited" value="TWFub2VsO0RFU0tUT1AtRjhMS1NETDsyMDI1LTAzLTE3OzA1OjU1OjUzIFBNOzEwMTszMTgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Jogo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Trabalho do CESUPA, aluno Manoel Alves, professor Pedro Girotto&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para jogar o jogo de Perguntas e Respostas&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para jogar o jogo Cobra na caixa&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para jogar o jogo de Gousmas War&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para sair&quot;" newline="True"/>
+            <input variable="Jogo"/>
+            <if expression="Jogo = 1">
+                <then>
+                    <call expression="JogoPerguntax"/>
+                </then>
+                <else>
+                    <if expression="Jogo = 4">
+                        <then>
+                            <output expression="&quot;Fechando...&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="Jogo = 2">
+                                <then>
+                                    <output expression="&quot;Bem vindo ao jogo de Cobra na Caixa&quot;" newline="True"/>
+                                    <declare name="Tutorial2" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Era uma vez, dois exploradores, que enquanto desbrabavam uma tumba eg&#237;pcia antiga, acabaram presos na mesma, os dois est&#227;o perantes a 5 caixas no centro da sala, cada caixa cont&#233;m um s&#237;mbolo eg&#237;pcio, em uma das caixas cont&#233;m o bot&#227;o que levar&#225; a sa&#237;da, em outra ter&#225; uma cobra, que matar&#225; o explorador azar&#227;o que abrir esta caixa, e as caixas restantes est&#227;o vazias.&quot;" newline="True"/>
+                                    <output expression="&quot;Cada explorador representa um jogador, neste jogo, cada jogador escolhe um dos nomes de exploradores pr&#233;-definidos (nomes dos sete escorpi&#245;es da lenda de &#205;sis, a quesito de curiosidade), e existem duas maneiras de ganhar o jogo, uma delas envolve achar o bot&#227;o que abrir&#225; a sa&#237;da, ou tor&#231;er para que seu advers&#225;rio ache a cobra mortal na caixa dele, s&#243; UM dos dois sobreviver&#225;, ent&#227;o, desejo-os boa sorte&quot;" newline="True"/>
+                                    <output expression="&quot;Entendido?&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 1 se sim, assim come&#231;ando o jogo&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 0 se n&#227;o, assim, retornando ao menu&quot;" newline="True"/>
+                                    <input variable="Tutorial2"/>
+                                    <if expression="Tutorial2 = 1">
+                                        <then>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <if expression="Tutorial2=0">
+                                                <then>
+                                                    <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                                    <call expression="Menu"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao menu...&quot;" newline="True"/>
+                                                    <call expression="Menu"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="Jogo = 3">
+                                        <then>
+                                            <output expression="&quot;Bem vindo ao jogo Gousmas War&quot;" newline="True"/>
+                                            <declare name="Tutorial3" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;Num jogo de estrat&#233;gia de dois jogadores em turnos , cada um cont&#233;m duas Gousmas, cada uma delas contendo 1 ponto de f&#250;ria, o objetivo do jogador &#233; eliminar todas as Gousmas de seu oponente, para isso, as Gousmas advers&#225;rias precisam chegar em mais de 5 pontos de f&#250;ria, para conceder f&#250;ria ao inimigo, basta atacar com sua Gousma, que a mesma tranferir&#225; todos os seus pontos de f&#250;ria no momento, caso uma Gousma sua acumular bastante f&#250;ria e tiver o risco de ser eliminada, voc&#234; pode dividir a f&#250;ria dela dentre suas 2 Gousmas, para aliviar a situa&#231;&#227;o&quot;" newline="True"/>
+                                            <output expression="&quot;Entendido?&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 1 para come&#231;ar o jogo&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 0 para retomar ao menu&quot;" newline="True"/>
+                                            <input variable="Tutorial3"/>
+                                            <if expression="Tutorial3 = 1">
+                                                <then>
+                                                    <call expression="Gousma"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="Tutorial3 = 0">
+                                                        <then>
+                                                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida, retornando ao menu...&quot;" newline="True"/>
+                                                            <call expression="Menu"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida&quot;" newline="True"/>
+                                            <output expression="&quot;Reiniciando...&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Gousma" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Jogador1Gousma" type="String" array="False" size=""/>
+            <declare name="Jogador2Gousma" type="String" array="False" size=""/>
+            <declare name="VidaJogador1" type="Boolean" array="False" size=""/>
+            <declare name="VidaJogador2" type="Boolean" array="False" size=""/>
+            <declare name="FuriaJogador1Gousma1" type="Real" array="False" size=""/>
+            <assign variable="FuriaJogador1Gousma1" expression="1"/>
+            <declare name="FuriaJogador1Gousma2" type="Real" array="False" size=""/>
+            <assign variable="FuriaJogador1Gousma2" expression="1"/>
+            <declare name="FuriaJogador2Gousma1" type="Real" array="False" size=""/>
+            <assign variable="FuriaJogador2Gousma1" expression="1"/>
+            <declare name="FuriaJogador2Gousma2" type="Real" array="False" size=""/>
+            <assign variable="FuriaJogador2Gousma2" expression="1"/>
+            <assign variable="VidaJogador1" expression="FuriaJogador1Gousma1 &lt;= 5 AND FuriaJogador1Gousma2 &lt;= 5"/>
+            <assign variable="VidaJogador2" expression="FuriaJogador2Gousma1 &lt;= 5 AND FuriaJogador2Gousma2 &lt;= 5"/>
+            <declare name="Gousma1P1" type="Boolean" array="False" size=""/>
+            <declare name="Gousma2P1" type="Boolean" array="False" size=""/>
+            <declare name="Gousma1P2" type="Boolean" array="False" size=""/>
+            <declare name="Gousma2P2" type="Boolean" array="False" size=""/>
+            <assign variable="Gousma1P1" expression="True"/>
+            <assign variable="Gousma1P2" expression="True"/>
+            <assign variable="Gousma2P1" expression="True"/>
+            <assign variable="Gousma2P2" expression="True"/>
+            <assign variable="VidaJogador1" expression="True"/>
+            <assign variable="VidaJogador2" expression="True"/>
+            <declare name="A&#231;&#227;o" type="Real" array="False" size=""/>
+            <declare name="Ataque" type="Real" array="False" size=""/>
+            <declare name="GousmaM&#227;e" type="Real" array="False" size=""/>
+            <declare name="Alvo" type="Real" array="False" size=""/>
+            <declare name="Furia" type="Real" array="False" size=""/>
+            <declare name="ComandoP&#243;sJogo" type="Real" array="False" size=""/>
+            <while expression="(VidaJogador1 = True) AND (VidaJogador2 = True)">
+                <output expression="&quot;Jogador 1, escolha sua a&#231;&#227;o:&quot;" newline="True"/>
+                <output expression="&quot;Digite 1 para Atacar!&quot;" newline="True"/>
+                <output expression="&quot;Digite 2 para dividir!&quot;" newline="True"/>
+                <output expression="&quot;Seus Dados:&quot;" newline="True"/>
+                <output expression="&quot;F&#250;ria de sua primeira Gousma:&quot;" newline="True"/>
+                <output expression="FuriaJogador1Gousma1" newline="True"/>
+                <output expression="&quot;F&#250;ria de sua segunda Gousma:&quot;" newline="True"/>
+                <output expression="FuriaJogador1Gousma2" newline="True"/>
+                <input variable="A&#231;&#227;o"/>
+                <if expression="A&#231;&#227;o = 1">
+                    <then>
+                        <output expression="&quot;Com qual Gousma sua voc&#234; gostaria de atacar?&quot;" newline="True"/>
+                        <output expression="&quot;Digite 1 para ser a Gousma 1&quot;" newline="True"/>
+                        <output expression="&quot;Digite 2 para ser a Gousma 2&quot;" newline="True"/>
+                        <input variable="Ataque"/>
+                        <if expression="Ataque = 1">
+                            <then>
+                                <if expression="Gousma1P1 = False">
+                                    <then>
+                                        <output expression="&quot;Esta Gousma j&#225; foi eliminada&quot;" newline="True"/>
+                                        <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <output expression="&quot;Qual Gousma do oponente voce deseja atacar?&quot;" newline="True"/>
+                                <output expression="&quot;Digite 1 para atacar a Gousma 1 dele&quot;" newline="True"/>
+                                <output expression="&quot;Digite 2 para atacar a Gousma 2 dele&quot;" newline="True"/>
+                                <input variable="Alvo"/>
+                                <if expression="Alvo = 1">
+                                    <then>
+                                        <assign variable="FuriaJogador2Gousma1" expression="FuriaJogador2Gousma1 + FuriaJogador1Gousma1"/>
+                                        <if expression="FuriaJogador2Gousma1 &gt; 5">
+                                            <then>
+                                                <assign variable="Gousma1P2" expression="False"/>
+                                                <output expression="&quot;A Gousma 1 do Jogador 2 foi desintegrada!&quot;" newline="True"/>
+                                                <if expression="(Gousma1P2 = False) AND (Gousma2P2 = False)">
+                                                    <then>
+                                                        <assign variable="VidaJogador2" expression="False"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="Alvo = 2">
+                                            <then>
+                                                <assign variable="FuriaJogador2Gousma2" expression="FuriaJogador2Gousma2 + FuriaJogador1Gousma1"/>
+                                                <if expression="FuriaJogador2Gousma2 &gt; 5">
+                                                    <then>
+                                                        <assign variable="Gousma2P2" expression="False"/>
+                                                        <output expression="&quot;A Gousma 2 do Jogador 2 foi desintegrada!&quot;" newline="True"/>
+                                                        <if expression="(Gousma1P2 = False) AND (Gousma2P2 = False)">
+                                                            <then>
+                                                                <assign variable="VidaJogador2" expression="False"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao Menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="Ataque = 2">
+                                    <then>
+                                        <if expression="Gousma2P1 = False">
+                                            <then>
+                                                <output expression="&quot;Esta Gousma j&#225; foi eliminada&quot;" newline="True"/>
+                                                <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                        <output expression="&quot;Qual Gousma do oponente voce deseja atacar?&quot;" newline="True"/>
+                                        <output expression="&quot;Digite 1 para atacar a Gousma 1 dele&quot;" newline="True"/>
+                                        <output expression="&quot;Digite 2 para atacar a Gousma 2 dele&quot;" newline="True"/>
+                                        <input variable="Alvo"/>
+                                        <if expression="Alvo = 1">
+                                            <then>
+                                                <assign variable="FuriaJogador2Gousma1" expression="FuriaJogador2Gousma1 + FuriaJogador1Gousma2"/>
+                                                <if expression="FuriaJogador2Gousma1 &gt; 5">
+                                                    <then>
+                                                        <assign variable="Gousma1P2" expression="False"/>
+                                                        <output expression="&quot;A Gousma 1 do Jogador 2 foi desintegrada!&quot;" newline="True"/>
+                                                        <if expression="(Gousma1P2 = False) AND (Gousma2P2 = False)">
+                                                            <then>
+                                                                <assign variable="VidaJogador2" expression="False"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="Alvo = 2">
+                                                    <then>
+                                                        <assign variable="FuriaJogador2Gousma2" expression="FuriaJogador2Gousma2 + FuriaJogador1Gousma2"/>
+                                                        <if expression="FuriaJogador2Gousma2 &gt; 5">
+                                                            <then>
+                                                                <assign variable="Gousma2P2" expression="False"/>
+                                                                <output expression="&quot;A Gousma 2 do Jogador 2 foi desintegrada!&quot;" newline="True"/>
+                                                                <if expression="(Gousma1P2 = False) AND (Gousma2P2 = False)">
+                                                                    <then>
+                                                                        <assign variable="VidaJogador2" expression="False"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao Menu...&quot;" newline="True"/>
+                                                        <call expression="Menu"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Gousma n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="A&#231;&#227;o = 2">
+                            <then>
+                                <if expression="Gousma1P1 = False OR Gousma2P1 = False">
+                                    <then>
+                                        <output expression="&quot;Uma das Gousmas foi ELIMINADA j&#225;, logo, a divis&#227;o n&#227;o pode ocorrer, retornando ao menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <output expression="&quot;Escolha sua a Gosma que ir&#225; conceder a f&#250;ria para a outra...&quot;" newline="True"/>
+                                <output expression="&quot;Digite 1 para Gousma 1&quot;" newline="True"/>
+                                <output expression="&quot;Digite 2 para Gousma 2&quot;" newline="True"/>
+                                <input variable="GousmaM&#227;e"/>
+                                <if expression="GousmaM&#227;e = 1">
+                                    <then>
+                                        <output expression="&quot;Digite quanto de f&#250;ria voc&#234; ira conceder para a sua outra Gousma&quot;" newline="True"/>
+                                        <input variable="Furia"/>
+                                        <if expression="Furia &gt;= 5">
+                                            <then>
+                                                <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="FuriaJogador1Gousma1" expression="FuriaJogador1Gousma1 - Furia"/>
+                                                <assign variable="FuriaJogador1Gousma2" expression="FuriaJogador1Gousma2 + Furia"/>
+                                                <if expression="FuriaJogador1Gousma2 &gt; 5">
+                                                    <then>
+                                                        <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                        <call expression="Menu"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="FuriaJogador1Gousma1 &lt; 0">
+                                                            <then>
+                                                                <output expression="&quot;Sua Gousma m&#227;e precisa NO M&#205;NIMO poder se manter com 0 de f&#250;ria, voltando ao menu pela inv&#225;lidade&quot;" newline="True"/>
+                                                                <call expression="Menu"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="GousmaM&#227;e = 2">
+                                            <then>
+                                                <output expression="&quot;Digite quanto de f&#250;ria voc&#234; ira conceder para a sua outra Gousma&quot;" newline="True"/>
+                                                <input variable="Furia"/>
+                                                <if expression="Furia &gt;= 5">
+                                                    <then>
+                                                        <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                        <call expression="Menu"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="FuriaJogador1Gousma2" expression="FuriaJogador1Gousma2 - Furia"/>
+                                                        <assign variable="FuriaJogador1Gousma1" expression="FuriaJogador1Gousma1 + Furia"/>
+                                                        <if expression="FuriaJogador1Gousma1 &gt; 5">
+                                                            <then>
+                                                                <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                                <call expression="Menu"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="FuriaJogador1Gousma2 &lt; 0">
+                                                                    <then>
+                                                                        <output expression="&quot;Sua Gousma m&#227;e precisa NO M&#205;NIMO poder se manter com 0 de f&#250;ria, voltando ao menu pela inv&#225;lidade&quot;" newline="True"/>
+                                                                        <call expression="Menu"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Gousma n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;Op&#231;&#227;o inv&#225;lida, voltando ao menu...&quot;" newline="True"/>
+                                <call expression="Menu"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Jogador 2, escolha sua a&#231;&#227;o:&quot;" newline="True"/>
+                <output expression="&quot;Digite 1 para Atacar!&quot;" newline="True"/>
+                <output expression="&quot;Digite 2 para dividir!&quot;" newline="True"/>
+                <output expression="&quot;Seus Dados:&quot;" newline="True"/>
+                <output expression="&quot;F&#250;ria de sua primeira Gousma:&quot;" newline="True"/>
+                <output expression="FuriaJogador2Gousma1" newline="True"/>
+                <output expression="&quot;F&#250;ria de sua segunda Gousma:&quot;" newline="True"/>
+                <output expression="FuriaJogador2Gousma2" newline="True"/>
+                <input variable="A&#231;&#227;o"/>
+                <if expression="A&#231;&#227;o = 1">
+                    <then>
+                        <output expression="&quot;Com qual Gousma sua voc&#234; gostaria de atacar?&quot;" newline="True"/>
+                        <output expression="&quot;Digite 1 para ser a Gousma 1&quot;" newline="True"/>
+                        <output expression="&quot;Digite 2 para ser a Gousma 2&quot;" newline="True"/>
+                        <input variable="Ataque"/>
+                        <if expression="Ataque = 1">
+                            <then>
+                                <if expression="Gousma1P2 = False">
+                                    <then>
+                                        <output expression="&quot;Esta Gousma j&#225; foi eliminada&quot;" newline="True"/>
+                                        <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <output expression="&quot;Qual Gousma do oponente voce deseja atacar?&quot;" newline="True"/>
+                                <output expression="&quot;Digite 1 para atacar a Gousma 1 dele&quot;" newline="True"/>
+                                <output expression="&quot;Digite 2 para atacar a Gousma 2 dele&quot;" newline="True"/>
+                                <input variable="Alvo"/>
+                                <if expression="Alvo = 1">
+                                    <then>
+                                        <assign variable="FuriaJogador1Gousma1" expression="FuriaJogador1Gousma1 + FuriaJogador2Gousma1"/>
+                                        <if expression="FuriaJogador1Gousma1 &gt; 5">
+                                            <then>
+                                                <assign variable="Gousma1P1" expression="False"/>
+                                                <output expression="&quot;A Gousma 1 do Jogador 1 foi desintegrada!&quot;" newline="True"/>
+                                                <if expression="(Gousma1P1 = False) AND (Gousma2P1 = False)">
+                                                    <then>
+                                                        <assign variable="VidaJogador1" expression="False"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="Alvo = 2">
+                                            <then>
+                                                <assign variable="FuriaJogador1Gousma2" expression="FuriaJogador1Gousma2 + FuriaJogador2Gousma1"/>
+                                                <if expression="FuriaJogador1Gousma2 &gt; 5">
+                                                    <then>
+                                                        <assign variable="Gousma2P1" expression="False"/>
+                                                        <output expression="&quot;A Gousma 2 do Jogador 1 foi desintegrada!&quot;" newline="True"/>
+                                                        <if expression="(Gousma1P1 = False) AND (Gousma2P1 = False)">
+                                                            <then>
+                                                                <assign variable="VidaJogador1" expression="False"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao Menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="Ataque = 2">
+                                    <then>
+                                        <if expression="Gousma2P2 = False">
+                                            <then>
+                                                <output expression="&quot;Esta Gousma j&#225; foi eliminada&quot;" newline="True"/>
+                                                <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                        <output expression="&quot;Qual Gousma do oponente voce deseja atacar?&quot;" newline="True"/>
+                                        <output expression="&quot;Digite 1 para atacar a Gousma 1 dele&quot;" newline="True"/>
+                                        <output expression="&quot;Digite 2 para atacar a Gousma 2 dele&quot;" newline="True"/>
+                                        <input variable="Alvo"/>
+                                        <if expression="Alvo = 1">
+                                            <then>
+                                                <assign variable="FuriaJogador1Gousma1" expression="FuriaJogador1Gousma1 + FuriaJogador2Gousma2"/>
+                                                <if expression="FuriaJogador1Gousma1 &gt; 5">
+                                                    <then>
+                                                        <assign variable="Gousma1P1" expression="False"/>
+                                                        <output expression="&quot;A Gousma 1 do Jogador 1 foi desintegrada!&quot;" newline="True"/>
+                                                        <if expression="(Gousma1P1 = False) AND (Gousma2P1 = False)">
+                                                            <then>
+                                                                <assign variable="VidaJogador1" expression="False"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="Alvo = 2">
+                                                    <then>
+                                                        <assign variable="FuriaJogador1Gousma2" expression="FuriaJogador1Gousma2 + FuriaJogador2Gousma2"/>
+                                                        <if expression="FuriaJogador1Gousma2 &gt; 5">
+                                                            <then>
+                                                                <assign variable="Gousma2P1" expression="False"/>
+                                                                <output expression="&quot;A Gousma 2 do Jogador 1 foi desintegrada!&quot;" newline="True"/>
+                                                                <if expression="(Gousma1P1 = False) AND (Gousma2P1 = False)">
+                                                                    <then>
+                                                                        <assign variable="VidaJogador1" expression="False"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao Menu...&quot;" newline="True"/>
+                                                        <call expression="Menu"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Gousma n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="A&#231;&#227;o = 2">
+                            <then>
+                                <if expression="Gousma1P2 = False OR Gousma2P2 = False">
+                                    <then>
+                                        <output expression="&quot;Uma das Gousmas foi ELIMINADA j&#225;, logo, a divis&#227;o n&#227;o pode ocorrer, retornando ao menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <output expression="&quot;Escolha sua a Gosma que ir&#225; conceder a f&#250;ria para a outra...&quot;" newline="True"/>
+                                <output expression="&quot;Digite 1 para Gousma 1&quot;" newline="True"/>
+                                <output expression="&quot;Digite 2 para Gousma 2&quot;" newline="True"/>
+                                <input variable="GousmaM&#227;e"/>
+                                <if expression="GousmaM&#227;e = 1">
+                                    <then>
+                                        <output expression="&quot;Digite quanto de f&#250;ria voc&#234; ira conceder para a sua outra Gousma&quot;" newline="True"/>
+                                        <input variable="Furia"/>
+                                        <if expression="Furia &gt;= 5">
+                                            <then>
+                                                <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="FuriaJogador2Gousma1" expression="FuriaJogador2Gousma1 - Furia"/>
+                                                <assign variable="FuriaJogador2Gousma2" expression="FuriaJogador2Gousma2 + Furia"/>
+                                                <if expression="FuriaJogador2Gousma2 &gt; 5">
+                                                    <then>
+                                                        <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                        <call expression="Menu"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="FuriaJogador2Gousma1 &lt; 0">
+                                                            <then>
+                                                                <output expression="&quot;Sua Gousma m&#227;e precisa NO M&#205;NIMO poder se manter com 0 de f&#250;ria, voltando ao menu pela inv&#225;lidade&quot;" newline="True"/>
+                                                                <call expression="Menu"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="GousmaM&#227;e = 2">
+                                            <then>
+                                                <output expression="&quot;Digite quanto de f&#250;ria voc&#234; ira conceder para a sua outra Gousma&quot;" newline="True"/>
+                                                <input variable="Furia"/>
+                                                <if expression="Furia &gt;= 5">
+                                                    <then>
+                                                        <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                        <call expression="Menu"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="FuriaJogador2Gousma2" expression="FuriaJogador2Gousma2 - Furia"/>
+                                                        <assign variable="FuriaJogador2Gousma1" expression="FuriaJogador2Gousma1 + Furia"/>
+                                                        <if expression="FuriaJogador2Gousma1 &gt; 5">
+                                                            <then>
+                                                                <output expression="&quot;Sua Gousma se desintegrar&#225; com isso, voltando ao menu...&quot;" newline="True"/>
+                                                                <call expression="Menu"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="FuriaJogador2Gousma2 &lt; 0">
+                                                                    <then>
+                                                                        <output expression="&quot;Sua Gousma m&#227;e precisa NO M&#205;NIMO poder se manter com 0 de f&#250;ria, voltando ao menu pela inv&#225;lidade&quot;" newline="True"/>
+                                                                        <call expression="Menu"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Gousma n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                <call expression="Menu"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;Op&#231;&#227;o inv&#225;lida, voltando ao menu...&quot;" newline="True"/>
+                                <call expression="Menu"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="VidaJogador1 = False">
+                <then>
+                    <output expression="&quot;Parabens Jogador 2, voc&#234; venceu!&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                    <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                    <input variable="ComandoP&#243;sJogo"/>
+                    <if expression="ComandoP&#243;sJogo = 1">
+                        <then>
+                            <output expression="&quot;Recome&#231;ando...&quot;" newline="True"/>
+                            <call expression="Gousma"/>
+                        </then>
+                        <else>
+                            <if expression="ComandoP&#243;sJogo = 0">
+                                <then>
+                                    <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                    <call expression="Menu"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="VidaJogador2 = False">
+                        <then>
+                            <output expression="&quot;Parabens Jogador 1, voc&#234; venceu!&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                            <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                            <input variable="ComandoP&#243;sJogo"/>
+                            <if expression="ComandoP&#243;sJogo = 1">
+                                <then>
+                                    <output expression="&quot;Recome&#231;ando...&quot;" newline="True"/>
+                                    <call expression="Gousma"/>
+                                </then>
+                                <else>
+                                    <if expression="ComandoP&#243;sJogo = 0">
+                                        <then>
+                                            <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                            <call expression="Menu"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="JogoCobra" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Prosseguindo...&quot;" newline="True"/>
+            <declare name="Jogador1" type="Integer" array="False" size=""/>
+            <declare name="Jogador2" type="Integer" array="False" size=""/>
+            <declare name="Personagem1" type="String" array="False" size=""/>
+            <declare name="Personagem2" type="String" array="False" size=""/>
+            <output expression="&quot;Bem vindo, jogador n&#250;mero 1! Escolha um nome para seu explorador da lista abaixo.&quot;" newline="True"/>
+            <output expression="&quot;Observa&#231;&#227;o: A escolha nominal &#233; apenas para fins de identifica&#231;&#227;o, nenhum nome tem vantagem nesse jogo&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para ser Tefen&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para ser Befen&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para ser Mestet&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para ser Mestetef&quot;" newline="True"/>
+            <output expression="&quot;Digite 5 para ser Petet&quot;" newline="True"/>
+            <output expression="&quot;Digite 6 para ser Tanet&quot;" newline="True"/>
+            <output expression="&quot;Digite 7 para ser Matet&quot;" newline="True"/>
+            <input variable="Jogador1"/>
+            <if expression="Jogador1 != 1 AND Jogador1 != 2 AND Jogador1 != 3 AND Jogador1 != 4 AND Jogador1 != 5 AND Jogador1 != 6 AND Jogador1 != 7">
+                <then>
+                    <output expression="&quot;Inv&#225;lido, digitar um n&#250;mero correspondente a um personagem&quot;" newline="True"/>
+                    <call expression="JogoCobra"/>
+                </then>
+                <else>
+                    <if expression="Jogador1 = 1">
+                        <then>
+                            <assign variable="Personagem1" expression="&quot;Tefen&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="Jogador1 = 2">
+                                <then>
+                                    <assign variable="Personagem1" expression="&quot;Befen&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="Jogador1 = 3">
+                                        <then>
+                                            <assign variable="Personagem1" expression="&quot;Mestet&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="Jogador1 = 4">
+                                                <then>
+                                                    <assign variable="Personagem1" expression="&quot;Mestetef&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="Jogador1 = 5">
+                                                        <then>
+                                                            <assign variable="Personagem1" expression="&quot;Petet&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="Jogador1 = 6">
+                                                                <then>
+                                                                    <assign variable="Personagem1" expression="&quot;Tanet&quot;"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="Jogador1 = 7">
+                                                                        <then>
+                                                                            <assign variable="Personagem1" expression="&quot;Matet&quot;"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Seu turno, jogador 2&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para ser Tefen&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para ser Befen&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para ser Mestet&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para ser Mestetef&quot;" newline="True"/>
+            <output expression="&quot;Digite 5 para ser Petet&quot;" newline="True"/>
+            <output expression="&quot;Digite 6 para ser Tanet&quot;" newline="True"/>
+            <output expression="&quot;Digite 7 para ser Matet&quot;" newline="True"/>
+            <input variable="Jogador2"/>
+            <if expression="Jogador2 != 1 AND Jogador2 != 2 AND Jogador2 != 3 AND Jogador2 != 4 AND Jogador2 != 5 AND Jogador2 != 6 AND Jogador2 != 7">
+                <then>
+                    <output expression="&quot;Inv&#225;lido, digitar um n&#250;mero correspondente a um personagem&quot;" newline="True"/>
+                    <call expression="JogoCobra"/>
+                </then>
+                <else>
+                    <if expression="Jogador2 = 1">
+                        <then>
+                            <assign variable="Personagem2" expression="&quot;Tefen&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="Jogador2 = 2">
+                                <then>
+                                    <assign variable="Personagem2" expression="&quot;Befen&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="Jogador2 = 3">
+                                        <then>
+                                            <assign variable="Personagem2" expression="&quot;Mestet&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="Jogador2 = 4">
+                                                <then>
+                                                    <assign variable="Personagem2" expression="&quot;Mestetef&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="Jogador2 = 5">
+                                                        <then>
+                                                            <assign variable="Personagem2" expression="&quot;Petet&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="Jogador2 = 6">
+                                                                <then>
+                                                                    <assign variable="Personagem2" expression="&quot;Tanet&quot;"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="Jogador2 = 7">
+                                                                        <then>
+                                                                            <assign variable="Personagem2" expression="&quot;Matet&quot;"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <while expression="Personagem2 = Personagem1">
+                <output expression="&quot;Os dois jogadores n&#227;o podem ser o mesmo explorador, reiniciando jogo...&quot;" newline="True"/>
+                <call expression="JogoCobra"/>
+            </while>
+            <declare name="JogadorDaVez" type="Integer" array="False" size=""/>
+            <assign variable="JogadorDaVez" expression="Random(2)+1"/>
+            <if expression="JogadorDaVez = 1">
+                <then>
+                    <output expression="Personagem1" newline="True"/>
+                    <output expression="&quot;Voc&#234; joga primeiro&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="Personagem2" newline="True"/>
+                    <output expression="&quot;Voc&#234; joga primeiro&quot;" newline="True"/>
+                </else>
+            </if>
+            <declare name="Bot&#227;o" type="Integer" array="False" size=""/>
+            <declare name="Cobra" type="Integer" array="False" size=""/>
+            <assign variable="Bot&#227;o" expression="Random(5)+1"/>
+            <assign variable="Cobra" expression="Random(5)+1"/>
+            <while expression="Cobra = Bot&#227;o">
+                <assign variable="Cobra" expression="Random(5)+1"/>
+            </while>
+            <declare name="CaixaEscolhida" type="Integer" array="False" size=""/>
+            <declare name="Ankh" type="Boolean" array="False" size=""/>
+            <declare name="OlhoHorus" type="Boolean" array="False" size=""/>
+            <declare name="Djed" type="Boolean" array="False" size=""/>
+            <declare name="Was" type="Boolean" array="False" size=""/>
+            <declare name="Ka" type="Boolean" array="False" size=""/>
+            <assign variable="Ankh" expression="False"/>
+            <assign variable="OlhoHorus" expression="False"/>
+            <assign variable="Djed" expression="False"/>
+            <assign variable="Was" expression="False"/>
+            <assign variable="Ka" expression="False"/>
+            <output expression="&quot;Escolha uma caixa para abrir&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para abrir a Caixa de Ankh&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para abrir a Caixa do Olho de H&#243;rus&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para abrir a Caixa do Djed&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para abrir a Caixa de Was&quot;" newline="True"/>
+            <output expression="&quot;Digite 5 para abrir a Caixa de Ka&quot;" newline="True"/>
+            <input variable="CaixaEscolhida"/>
+            <if expression="CaixaEscolhida = 1">
+                <then>
+                    <assign variable="Ankh" expression="True"/>
+                </then>
+                <else>
+                    <if expression="CaixaEscolhida = 2">
+                        <then>
+                            <assign variable="OlhoHorus" expression="True"/>
+                        </then>
+                        <else>
+                            <if expression="CaixaEscolhida = 3">
+                                <then>
+                                    <assign variable="Djed" expression="True"/>
+                                </then>
+                                <else>
+                                    <if expression="CaixaEscolhida = 4">
+                                        <then>
+                                            <assign variable="Was" expression="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="CaixaEscolhida = 5">
+                                                <then>
+                                                    <assign variable="Ka" expression="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Caixa n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                    <call expression="Menu"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="CaixaEscolhida = Cobra">
+                <then>
+                    <output expression="&quot;Voc&#234; encontrou a Cobra, voc&#234; foi morto por ela!&quot;" newline="True"/>
+                    <output expression="&quot;Vit&#243;ria para o advers&#225;rio&quot;" newline="True"/>
+                    <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                    <declare name="FimCobra" type="Integer" array="False" size=""/>
+                    <input variable="FimCobra"/>
+                    <if expression="FimCobra = 0">
+                        <then>
+                            <call expression="Menu"/>
+                        </then>
+                        <else>
+                            <if expression="FimCobra = 1">
+                                <then>
+                                    <call expression="JogoCobra"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                    <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                    <call expression="Menu"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="CaixaEscolhida = Bot&#227;o">
+                        <then>
+                            <output expression="&quot;Parabens, voc&#234; encontrou o bot&#227;o! Voc&#234; usa a sa&#237;da para voltar para a casa enquanto o outro explorador fica preso na tumba para sempre! FIM&quot;" newline="True"/>
+                            <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                            <declare name="FimCobra" type="Integer" array="False" size=""/>
+                            <input variable="FimCobra"/>
+                            <if expression="FimCobra = 0">
+                                <then>
+                                    <call expression="Menu"/>
+                                </then>
+                                <else>
+                                    <if expression="FimCobra = 1">
+                                        <then>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                            <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                            <call expression="Menu"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;N&#227;o h&#225; nada nesta caixa, vez do outro jogador&quot;" newline="True"/>
+                            <if expression="JogadorDaVez = 1">
+                                <then>
+                                    <assign variable="JogadorDaVez" expression="2"/>
+                                    <output expression="Personagem2" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="JogadorDaVez" expression="1"/>
+                                    <output expression="Personagem1" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Escolha uma caixa para abrir&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para abrir a Caixa de Ankh&quot;" newline="True"/>
+                            <output expression="&quot;Digite 2 para abrir a Caixa do Olho de H&#243;rus&quot;" newline="True"/>
+                            <output expression="&quot;Digite 3 para abrir a Caixa do Djed&quot;" newline="True"/>
+                            <output expression="&quot;Digite 4 para abrir a Caixa de Was&quot;" newline="True"/>
+                            <output expression="&quot;Digite 5 para abrir a Caixa de Ka&quot;" newline="True"/>
+                            <input variable="CaixaEscolhida"/>
+                            <if expression="CaixaEscolhida = 1">
+                                <then>
+                                    <if expression="Ankh = True">
+                                        <then>
+                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="Ankh" expression="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="CaixaEscolhida = 2">
+                                        <then>
+                                            <if expression="OlhoHorus = True">
+                                                <then>
+                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                    <call expression="JogoCobra"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="OlhoHorus" expression="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="CaixaEscolhida = 3">
+                                                <then>
+                                                    <if expression="Djed = True">
+                                                        <then>
+                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                            <call expression="JogoCobra"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="Djed" expression="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <assign variable="Djed" expression="True"/>
+                                                    <if expression="CaixaEscolhida = 4">
+                                                        <then>
+                                                            <if expression="Was = True">
+                                                                <then>
+                                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                    <call expression="JogoCobra"/>
+                                                                </then>
+                                                                <else>
+                                                                    <assign variable="Was" expression="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="CaixaEscolhida = 5">
+                                                                <then>
+                                                                    <if expression="Ka = True">
+                                                                        <then>
+                                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                            <call expression="JogoCobra"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <assign variable="Ka" expression="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Caixa n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                                    <call expression="Menu"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="CaixaEscolhida = Cobra">
+                <then>
+                    <output expression="&quot;Voc&#234; encontrou a Cobra, voc&#234; foi morto por ela!&quot;" newline="True"/>
+                    <output expression="&quot;Vit&#243;ria para o advers&#225;rio&quot;" newline="True"/>
+                    <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                    <declare name="FimCobra" type="Integer" array="False" size=""/>
+                    <input variable="FimCobra"/>
+                    <if expression="FimCobra = 0">
+                        <then>
+                            <call expression="Menu"/>
+                        </then>
+                        <else>
+                            <if expression="FimCobra = 1">
+                                <then>
+                                    <call expression="JogoCobra"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                    <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                    <call expression="Menu"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="CaixaEscolhida = Bot&#227;o">
+                        <then>
+                            <output expression="&quot;Parabens, voc&#234; encontrou o bot&#227;o! Voc&#234; usa a sa&#237;da para voltar para a casa enquanto o outro explorador fica preso na tumba para sempre, FIM!&quot;" newline="True"/>
+                            <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                            <declare name="FimCobra" type="Integer" array="False" size=""/>
+                            <input variable="FimCobra"/>
+                            <if expression="FimCobra = 0">
+                                <then>
+                                    <call expression="Menu"/>
+                                </then>
+                                <else>
+                                    <if expression="FimCobra = 1">
+                                        <then>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                            <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                            <call expression="Menu"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;N&#227;o h&#225; nada nesta caixa, vez do outro jogador&quot;" newline="True"/>
+                            <if expression="JogadorDaVez = 1">
+                                <then>
+                                    <assign variable="JogadorDaVez" expression="2"/>
+                                    <output expression="Personagem2" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="JogadorDaVez" expression="1"/>
+                                    <output expression="Personagem1" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Escolha uma caixa para abrir&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para abrir a Caixa de Ankh&quot;" newline="True"/>
+                            <output expression="&quot;Digite 2 para abrir a Caixa do Olho de H&#243;rus&quot;" newline="True"/>
+                            <output expression="&quot;Digite 3 para abrir a Caixa do Djed&quot;" newline="True"/>
+                            <output expression="&quot;Digite 4 para abrir a Caixa de Was&quot;" newline="True"/>
+                            <output expression="&quot;Digite 5 para abrir a Caixa de Ka&quot;" newline="True"/>
+                            <input variable="CaixaEscolhida"/>
+                            <if expression="CaixaEscolhida = 1">
+                                <then>
+                                    <if expression="Ankh = True">
+                                        <then>
+                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="Ankh" expression="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="CaixaEscolhida = 2">
+                                        <then>
+                                            <if expression="OlhoHorus = True">
+                                                <then>
+                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                    <call expression="JogoCobra"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="OlhoHorus" expression="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="CaixaEscolhida = 3">
+                                                <then>
+                                                    <if expression="Djed = True">
+                                                        <then>
+                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                            <call expression="JogoCobra"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="Djed" expression="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <assign variable="Djed" expression="True"/>
+                                                    <if expression="CaixaEscolhida = 4">
+                                                        <then>
+                                                            <if expression="Was = True">
+                                                                <then>
+                                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                    <call expression="JogoCobra"/>
+                                                                </then>
+                                                                <else>
+                                                                    <assign variable="Was" expression="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="CaixaEscolhida = 5">
+                                                                <then>
+                                                                    <if expression="Ka = True">
+                                                                        <then>
+                                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                            <call expression="JogoCobra"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <assign variable="Ka" expression="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Caixa n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                                    <call expression="Menu"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="CaixaEscolhida = Cobra">
+                <then>
+                    <output expression="&quot;Voc&#234; encontrou a Cobra, voc&#234; foi morto por ela!&quot;" newline="True"/>
+                    <output expression="&quot;Vit&#243;ria para o advers&#225;rio&quot;" newline="True"/>
+                    <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                    <declare name="FimCobra" type="Integer" array="False" size=""/>
+                    <input variable="FimCobra"/>
+                    <if expression="FimCobra = 0">
+                        <then>
+                            <call expression="Menu"/>
+                        </then>
+                        <else>
+                            <if expression="FimCobra = 1">
+                                <then>
+                                    <call expression="JogoCobra"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                    <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                    <call expression="Menu"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="CaixaEscolhida = Bot&#227;o">
+                        <then>
+                            <output expression="&quot;Parabens, voc&#234; encontrou o bot&#227;o! Voc&#234; usa a sa&#237;da para voltar para a casa enquanto o outro explorador fica preso na tumba para sempre, FIM!&quot;" newline="True"/>
+                            <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                            <declare name="FimCobra" type="Integer" array="False" size=""/>
+                            <input variable="FimCobra"/>
+                            <if expression="FimCobra = 0">
+                                <then>
+                                    <call expression="Menu"/>
+                                </then>
+                                <else>
+                                    <if expression="FimCobra = 1">
+                                        <then>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                            <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                            <call expression="Menu"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;N&#227;o h&#225; nada nesta caixa, vez do outro jogador&quot;" newline="True"/>
+                            <if expression="JogadorDaVez = 1">
+                                <then>
+                                    <assign variable="JogadorDaVez" expression="2"/>
+                                    <output expression="Personagem2" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="JogadorDaVez" expression="1"/>
+                                    <output expression="Personagem1" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Escolha uma caixa para abrir&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para abrir a Caixa de Ankh&quot;" newline="True"/>
+                            <output expression="&quot;Digite 2 para abrir a Caixa do Olho de H&#243;rus&quot;" newline="True"/>
+                            <output expression="&quot;Digite 3 para abrir a Caixa do Djed&quot;" newline="True"/>
+                            <output expression="&quot;Digite 4 para abrir a Caixa de Was&quot;" newline="True"/>
+                            <output expression="&quot;Digite 5 para abrir a Caixa de Ka&quot;" newline="True"/>
+                            <input variable="CaixaEscolhida"/>
+                            <if expression="CaixaEscolhida = 1">
+                                <then>
+                                    <if expression="Ankh = True">
+                                        <then>
+                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="Ankh" expression="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="CaixaEscolhida = 2">
+                                        <then>
+                                            <if expression="OlhoHorus = True">
+                                                <then>
+                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                    <call expression="JogoCobra"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="OlhoHorus" expression="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="CaixaEscolhida = 3">
+                                                <then>
+                                                    <if expression="Djed = True">
+                                                        <then>
+                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                            <call expression="JogoCobra"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="Djed" expression="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <assign variable="Djed" expression="True"/>
+                                                    <if expression="CaixaEscolhida = 4">
+                                                        <then>
+                                                            <if expression="Was = True">
+                                                                <then>
+                                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                    <call expression="JogoCobra"/>
+                                                                </then>
+                                                                <else>
+                                                                    <assign variable="Was" expression="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="CaixaEscolhida = 5">
+                                                                <then>
+                                                                    <if expression="Ka = True">
+                                                                        <then>
+                                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                            <call expression="JogoCobra"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <assign variable="Ka" expression="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Caixa n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                                    <call expression="Menu"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="CaixaEscolhida = Cobra">
+                <then>
+                    <output expression="&quot;Voc&#234; encontrou a Cobra, voc&#234; foi morto por ela!&quot;" newline="True"/>
+                    <output expression="&quot;Vit&#243;ria para o advers&#225;rio&quot;" newline="True"/>
+                    <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                    <declare name="FimCobra" type="Integer" array="False" size=""/>
+                    <input variable="FimCobra"/>
+                    <if expression="FimCobra = 0">
+                        <then>
+                            <call expression="Menu"/>
+                        </then>
+                        <else>
+                            <if expression="FimCobra = 1">
+                                <then>
+                                    <call expression="JogoCobra"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                    <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                    <call expression="Menu"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="CaixaEscolhida = Bot&#227;o">
+                        <then>
+                            <output expression="&quot;Parabens, voc&#234; encontrou o bot&#227;o! Voc&#234; usa a sa&#237;da para voltar para a casa enquanto o outro explorador fica preso na tumba para sempre, FIM!&quot;" newline="True"/>
+                            <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para jogar novamente&quot;" newline="True"/>
+                            <declare name="FimCobra" type="Integer" array="False" size=""/>
+                            <input variable="FimCobra"/>
+                            <if expression="FimCobra = 0">
+                                <then>
+                                    <call expression="Menu"/>
+                                </then>
+                                <else>
+                                    <if expression="FimCobra = 1">
+                                        <then>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida...&quot;" newline="True"/>
+                                            <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                                            <call expression="Menu"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;N&#227;o h&#225; nada nesta caixa, vez do outro jogador&quot;" newline="True"/>
+                            <if expression="JogadorDaVez = 1">
+                                <then>
+                                    <assign variable="JogadorDaVez" expression="2"/>
+                                    <output expression="Personagem2" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="JogadorDaVez" expression="1"/>
+                                    <output expression="Personagem1" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Escolha uma caixa para abrir&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 para abrir a Caixa de Ankh&quot;" newline="True"/>
+                            <output expression="&quot;Digite 2 para abrir a Caixa do Olho de H&#243;rus&quot;" newline="True"/>
+                            <output expression="&quot;Digite 3 para abrir a Caixa do Djed&quot;" newline="True"/>
+                            <output expression="&quot;Digite 4 para abrir a Caixa de Was&quot;" newline="True"/>
+                            <output expression="&quot;Digite 5 para abrir a Caixa de Ka&quot;" newline="True"/>
+                            <input variable="CaixaEscolhida"/>
+                            <if expression="CaixaEscolhida = 1">
+                                <then>
+                                    <if expression="Ankh = True">
+                                        <then>
+                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                            <call expression="JogoCobra"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="Ankh" expression="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="CaixaEscolhida = 2">
+                                        <then>
+                                            <if expression="OlhoHorus = True">
+                                                <then>
+                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                    <call expression="JogoCobra"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="OlhoHorus" expression="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="CaixaEscolhida = 3">
+                                                <then>
+                                                    <if expression="Djed = True">
+                                                        <then>
+                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                            <call expression="JogoCobra"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="Djed" expression="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <assign variable="Djed" expression="True"/>
+                                                    <if expression="CaixaEscolhida = 4">
+                                                        <then>
+                                                            <if expression="Was = True">
+                                                                <then>
+                                                                    <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                    <call expression="JogoCobra"/>
+                                                                </then>
+                                                                <else>
+                                                                    <assign variable="Was" expression="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="CaixaEscolhida = 5">
+                                                                <then>
+                                                                    <if expression="Ka = True">
+                                                                        <then>
+                                                                            <output expression="&quot;Caixa j&#225; escolhida,reiniciando o jogo...&quot;" newline="True"/>
+                                                                            <call expression="JogoCobra"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <assign variable="Ka" expression="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Caixa n&#227;o existente, voltando ao menu...&quot;" newline="True"/>
+                                                                    <call expression="Menu"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="JogoPerguntax" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Bem vindo ao jogo de perguntas e respostas!&quot;" newline="True"/>
+            <declare name="Tutorial" type="Integer" array="False" size=""/>
+            <output expression="&quot;Tutorial: Aparecer&#225; uma pergunta na tela com 4 alternativas, cada uma corresponde a um n&#250;mero, das alternativas, apenas uma &#233; correta, digite o n&#250;mero correspondente a alternativa a qual voc&#234; acha que &#233; correta, ao colocar uma alternativa incorreta ou inv&#225;lida, o quiz reiniciar&#225;.&quot;" newline="True"/>
+            <output expression="&quot;Importante ressaltar o tema: Videogames&quot;" newline="True"/>
+            <output expression="&quot;Entendido?&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 se sim, assim prosseguindo com o quiz&quot;" newline="True"/>
+            <output expression="&quot;Digite 0 para retornar ao menu&quot;" newline="True"/>
+            <input variable="Tutorial"/>
+            <if expression="Tutorial = 1">
+                <then>
+                    <output expression="&quot;Prosseguindo...&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="Tutorial = 0">
+                        <then>
+                            <output expression="&quot;Voltando...&quot;" newline="True"/>
+                            <call expression="Menu"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao menu...&quot;" newline="True"/>
+                            <call expression="Menu"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="Jogo1" type="String" array="False" size=""/>
+            <output expression="&quot;Jogo de perguntas&quot;" newline="True"/>
+            <declare name="Pergunta1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Primeira Pergunta:&quot;" newline="True"/>
+            <output expression="&quot;Qual foi o primeiro personagem third party de Super Smash Bros Brawl que foi revelado ao p&#250;blico?&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para votar no Snake, de Metal Gear&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para votar no Sonic, the Hedgehog/o ouri&#231;o&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para votar no Ryu, de Street Fighter&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para votar no Mega-Man, de franquia do mesmo nome&quot;" newline="True"/>
+            <input variable="Pergunta1"/>
+            <if expression="Pergunta1 = 1">
+                <then>
+                    <output expression="&quot;Parabens, pr&#243;xima pergunta&quot;" newline="True"/>
+                    <declare name="Pergunta2" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Segunda Pergunta:&quot;" newline="True"/>
+                    <output expression="&quot;Qual o console mais vendido da hist&#243;ria?&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para responder Nintendo DS&quot;" newline="True"/>
+                    <output expression="&quot;Digite 2 para responder PS1 (Playstation 1)&quot;" newline="True"/>
+                    <output expression="&quot;Digite 3 para responder PS2 (Playstation 2)&quot;" newline="True"/>
+                    <output expression="&quot;Digite 4 para responder Nintendo Switch&quot;" newline="True"/>
+                    <input variable="Pergunta2"/>
+                    <if expression="Pergunta2 = 3">
+                        <then>
+                            <output expression="&quot;Parabens, Pr&#243;xima Pergunta&quot;" newline="True"/>
+                            <declare name="Pergunta3" type="Integer" array="False" size=""/>
+                            <output expression="&quot;Ter&#231;eira Pergunta:&quot;" newline="True"/>
+                            <output expression="&quot;Somente um dos jogos abaixo concorreu a premia&#231;&#227;o The Game Awards do ano de 2019, qual foi?&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 se foi Ghost Of Tsushima&quot;" newline="True"/>
+                            <output expression="&quot;Digite 2 se foi Control&quot;" newline="True"/>
+                            <output expression="&quot;Digite 3 se foi Monster Hunter World&quot;" newline="True"/>
+                            <output expression="&quot;Digite 4 se foi Assassin's Creed Odyssey&quot;" newline="True"/>
+                            <input variable="Pergunta3"/>
+                            <if expression="Pergunta3 = 2">
+                                <then>
+                                    <output expression="&quot;Parabens, Pr&#243;xima Pergunta&quot;" newline="True"/>
+                                    <declare name="Pergunta4" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Quarta Pergunta:&quot;" newline="True"/>
+                                    <output expression="&quot;Wii Sports, jogo que vinha acompanhado do console Wii, se tornou um dos jogos mais vendidos da hist&#243;ria por conta da popularidade absurda do console, quantas unidades ele vendeu?&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 1 se foram cerca de 101.000.000 de unidades&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 2 se foram 88.100.000 de unidades&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 3 se foram cerca de 82.900.000 unidades&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 4 se foram 97.400.000 de unidades&quot;" newline="True"/>
+                                    <input variable="Pergunta4"/>
+                                    <if expression="Pergunta4 = 3">
+                                        <then>
+                                            <output expression="&quot;Parabens, pr&#243;xima e &#250;ltima pergunta&quot;" newline="True"/>
+                                            <declare name="Pergunta5" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;Quinta Pergunta: Qual desses personagens N&#195;O &#233; lutador(a) da franquia Tekken?&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 1 se for Kazuya Mishima&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 2 se for Eddy Gordo&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 3 se for Alisa Bosconovitch&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 4 se for Iori Yagami&quot;" newline="True"/>
+                                            <input variable="Pergunta5"/>
+                                            <if expression="Pergunta5 = 4">
+                                                <then>
+                                                    <declare name="FinalPergunta" type="Integer" array="False" size=""/>
+                                                    <output expression="&quot;Resposta certa! Obrigado por jogar&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite 0 para voltar ao menu principal&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite 1 para reiniciar o quiz&quot;" newline="True"/>
+                                                    <input variable="FinalPergunta"/>
+                                                    <if expression="FinalPergunta = 0">
+                                                        <then>
+                                                            <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                                            <call expression="Menu"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Reiniciando o Quiz...&quot;" newline="True"/>
+                                                            <call expression="QuizReinicio"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <while expression="Pergunta5 = 1 OR Pergunta5 = 2 OR Pergunta5 = 3">
+                                                        <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                                        <call expression="QuizReinicio"/>
+                                                    </while>
+                                                    <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                                                    <call expression="QuizReinicio"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <while expression="Pergunta4 = 1 OR Pergunta4 = 2 OR Pergunta4 = 4">
+                                                <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                                <call expression="QuizReinicio"/>
+                                            </while>
+                                            <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                                            <call expression="QuizReinicio"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <while expression="Pergunta3 = 1 OR Pergunta3 = 3 OR Pergunta3 = 4">
+                                        <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                        <call expression="QuizReinicio"/>
+                                    </while>
+                                    <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                                    <call expression="QuizReinicio"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <while expression="Pergunta2=1 OR Pergunta2=2 OR Pergunta2=4">
+                                <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                <call expression="QuizReinicio"/>
+                            </while>
+                            <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                            <call expression="QuizReinicio"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <while expression="Pergunta1 &gt;=1 AND Pergunta1 &lt;= 4">
+                        <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                        <call expression="QuizReinicio"/>
+                    </while>
+                    <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                    <call expression="QuizReinicio"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Menu" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Jogo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Trabalho do CESUPA, aluno Manoel Alves, professor Pedro Girotto&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para jogar o jogo de Perguntas e Respostas&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para jogar o jogo Cobra na caixa&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para jogar o jogo de Gousmas War&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para sair&quot;" newline="True"/>
+            <input variable="Jogo"/>
+            <while expression="Jogo !=4">
+                <if expression="Jogo = 1">
+                    <then>
+                        <call expression="JogoPerguntax"/>
+                    </then>
+                    <else>
+                        <if expression="Jogo = 2">
+                            <then>
+                                <call expression="TutorialCobra"/>
+                            </then>
+                            <else>
+                                <if expression="Jogo = 3">
+                                    <then>
+                                        <call expression="TutorialGousma"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Op&#231;&#227;o inv&#225;lida, retornando ao inicio do menu...&quot;" newline="True"/>
+                                        <call expression="Menu"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Fechando...&quot;" newline="True"/>
+            <breakpoint expression="" always="True"/>
+        </body>
+    </function>
+    <function name="QuizReinicio" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Bem vindo ao jogo de perguntas e respostas!&quot;" newline="True"/>
+            <output expression="&quot;Importante ressaltar o tema: Videogames&quot;" newline="True"/>
+            <declare name="Jogo1" type="String" array="False" size=""/>
+            <output expression="&quot;Jogo de perguntas&quot;" newline="True"/>
+            <declare name="Pergunta1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Primeira Pergunta:&quot;" newline="True"/>
+            <output expression="&quot;Qual foi o primeiro personagem third party de Super Smash Bros Brawl que foi revelado ao p&#250;blico?&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para votar no Snake, de Metal Gear&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para votar no Sonic, the Hedgehog/o ouri&#231;o&quot;" newline="True"/>
+            <output expression="&quot;Digite 3 para votar no Ryu, de Street Fighter&quot;" newline="True"/>
+            <output expression="&quot;Digite 4 para votar no Mega-Man, de franquia do mesmo nome&quot;" newline="True"/>
+            <input variable="Pergunta1"/>
+            <if expression="Pergunta1 = 1">
+                <then>
+                    <output expression="&quot;Parabens, pr&#243;xima pergunta&quot;" newline="True"/>
+                    <declare name="Pergunta2" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Segunda Pergunta:&quot;" newline="True"/>
+                    <output expression="&quot;Qual o console mais vendido da hist&#243;ria?&quot;" newline="True"/>
+                    <output expression="&quot;Digite 1 para responder Nintendo DS&quot;" newline="True"/>
+                    <output expression="&quot;Digite 2 para responder PS1 (Playstation 1)&quot;" newline="True"/>
+                    <output expression="&quot;Digite 3 para responder PS2 (Playstation 2)&quot;" newline="True"/>
+                    <output expression="&quot;Digite 4 para responder Nintendo Switch&quot;" newline="True"/>
+                    <input variable="Pergunta2"/>
+                    <if expression="Pergunta2 = 3">
+                        <then>
+                            <output expression="&quot;Parabens, Pr&#243;xima Pergunta&quot;" newline="True"/>
+                            <declare name="Pergunta3" type="Integer" array="False" size=""/>
+                            <output expression="&quot;Ter&#231;eira Pergunta:&quot;" newline="True"/>
+                            <output expression="&quot;Somente um dos jogos abaixo concorreu a premia&#231;&#227;o The Game Awards do ano de 2019, qual foi?&quot;" newline="True"/>
+                            <output expression="&quot;Digite 1 se foi Ghost Of Tsushima&quot;" newline="True"/>
+                            <output expression="&quot;Digite 2 se foi Control&quot;" newline="True"/>
+                            <output expression="&quot;Digite 3 se foi Monster Hunter World&quot;" newline="True"/>
+                            <output expression="&quot;Digite 4 se foi Assassin's Creed Odyssey&quot;" newline="True"/>
+                            <input variable="Pergunta3"/>
+                            <if expression="Pergunta3 = 2">
+                                <then>
+                                    <output expression="&quot;Parabens, Pr&#243;xima Pergunta&quot;" newline="True"/>
+                                    <declare name="Pergunta4" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Quarta Pergunta:&quot;" newline="True"/>
+                                    <output expression="&quot;Wii Sports, jogo que vinha acompanhado do console Wii, se tornou um dos jogos mais vendidos da hist&#243;ria por conta da popularidade absurda do console, quantas unidades ele vendeu?&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 1 se foram cerca de 101.000.000 de unidades&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 2 se foram 88.100.000 de unidades&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 3 se foram cerca de 82.900.000 unidades&quot;" newline="True"/>
+                                    <output expression="&quot;Digite 4 se foram 97.400.000 de unidades&quot;" newline="True"/>
+                                    <input variable="Pergunta4"/>
+                                    <if expression="Pergunta4 = 3">
+                                        <then>
+                                            <output expression="&quot;Parabens, pr&#243;xima e &#250;ltima pergunta&quot;" newline="True"/>
+                                            <declare name="Pergunta5" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;Quinta Pergunta: Qual desses personagens N&#195;O &#233; lutador(a) da franquia Tekken?&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 1 se for Kazuya Mishima&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 2 se for Eddy Gordo&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 3 se for Alisa Bosconovitch&quot;" newline="True"/>
+                                            <output expression="&quot;Digite 4 se for Iori Yagami&quot;" newline="True"/>
+                                            <input variable="Pergunta5"/>
+                                            <if expression="Pergunta5 = 4">
+                                                <then>
+                                                    <declare name="FinalPergunta" type="Integer" array="False" size=""/>
+                                                    <output expression="&quot;Resposta certa! Obrigado por jogar&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite 0 para voltar ao menu principal&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite 1 para reiniciar o quiz&quot;" newline="True"/>
+                                                    <input variable="FinalPergunta"/>
+                                                    <if expression="FinalPergunta = 0">
+                                                        <then>
+                                                            <output expression="&quot;Voltando ao menu...&quot;" newline="True"/>
+                                                            <call expression="Menu"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Reiniciando Quiz...&quot;" newline="True"/>
+                                                            <call expression="QuizReinicio"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <while expression="Pergunta5 = 1 OR Pergunta5 = 2 OR Pergunta5 = 3">
+                                                        <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                                        <call expression="QuizReinicio"/>
+                                                    </while>
+                                                    <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                                                    <call expression="QuizReinicio"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <while expression="Pergunta4 = 1 OR Pergunta4 = 2 OR Pergunta4 = 4">
+                                                <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                                <call expression="QuizReinicio"/>
+                                            </while>
+                                            <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                                            <call expression="QuizReinicio"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <while expression="Pergunta3 = 1 OR Pergunta3 = 3 OR Pergunta3 = 4">
+                                        <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                        <call expression="QuizReinicio"/>
+                                    </while>
+                                    <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                                    <call expression="QuizReinicio"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <while expression="Pergunta2=1 OR Pergunta2=2 OR Pergunta2=4">
+                                <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                                <call expression="QuizReinicio"/>
+                            </while>
+                            <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                            <call expression="QuizReinicio"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <while expression="Pergunta1 &gt;=1 AND Pergunta1 &lt;= 4">
+                        <output expression="&quot;Resposta incorreta, jogo recome&#231;ando&quot;" newline="True"/>
+                        <call expression="QuizReinicio"/>
+                    </while>
+                    <output expression="&quot;Inv&#225;lido... Reiniciando Quiz...&quot;" newline="True"/>
+                    <call expression="QuizReinicio"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="TutorialCobra" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Bem vindo ao jogo de Cobra na Caixa&quot;" newline="True"/>
+            <declare name="Tutorial2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Era uma vez, dois exploradores, que enquanto desbrabavam uma tumba eg&#237;pcia antiga, acabaram presos na mesma, os dois est&#227;o perantes a 5 caixas no centro da sala, cada caixa cont&#233;m um s&#237;mbolo eg&#237;pcio, em uma das caixas cont&#233;m o bot&#227;o que levar&#225; a sa&#237;da, em outra ter&#225; uma cobra, que matar&#225; o explorador azar&#227;o que abrir esta caixa, e as caixas restantes est&#227;o vazias.&quot;" newline="True"/>
+            <output expression="&quot;Cada explorador representa um jogador, neste jogo, cada jogador escolhe um dos nomes de exploradores pr&#233;-definidos (nomes dos sete escorpi&#245;es da lenda de &#205;sis, a quesito de curiosidade), e existem duas maneiras de ganhar o jogo, uma delas envolve achar o bot&#227;o que abrir&#225; a sa&#237;da, ou tor&#231;er para que seu advers&#225;rio ache a cobra mortal na caixa dele, s&#243; UM dos dois sobreviver&#225;, ent&#227;o, desejo-os boa sorte&quot;" newline="True"/>
+            <output expression="&quot;Entendido?&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 se sim, assim come&#231;ando o jogo&quot;" newline="True"/>
+            <output expression="&quot;Digite 0 se n&#227;o, assim, retornando ao menu&quot;" newline="True"/>
+            <input variable="Tutorial2"/>
+            <if expression="Tutorial2 = 1">
+                <then>
+                    <call expression="JogoCobra"/>
+                </then>
+                <else>
+                    <if expression="Tutorial2=0">
+                        <then>
+                            <output expression="&quot;Retornando ao menu...&quot;" newline="True"/>
+                            <call expression="Menu"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida... Retornando ao menu...&quot;" newline="True"/>
+                            <call expression="Menu"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="TutorialGousma" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Bem vindo ao jogo Gousmas War&quot;" newline="True"/>
+            <declare name="Tutorial3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Num jogo de estrat&#233;gia ede dois jogadores em turnos , cada um cont&#233;m duas Gousmas, cada uma delas contendo 1 ponto de f&#250;ria, o objetivo do jogador &#233; eliminar todas as Gousmas de seu oponente, para isso, as Gousmas advers&#225;rias precisam chegar em mais de 5 pontos de f&#250;ria, para conceder f&#250;ria ao inimigo, basta atacar com sua Gousma, que a mesma tranferir&#225; todos os seus pontos de f&#250;ria no momento, caso uma Gousma sua acumular bastante f&#250;ria e tiver o risco de ser eliminada, voc&#234; pode dividir a f&#250;ria dela dentre suas 2 Gousmas, para aliviar a situa&#231;&#227;o&quot;" newline="True"/>
+            <output expression="&quot;Entendido?&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para come&#231;ar o jogo&quot;" newline="True"/>
+            <output expression="&quot;Digite 0 para retomar ao menu&quot;" newline="True"/>
+            <input variable="Tutorial3"/>
+            <if expression="Tutorial3 = 1">
+                <then>
+                    <call expression="Gousma"/>
+                </then>
+                <else>
+                    <if expression="Tutorial3 = 0">
+                        <then>
+                            <output expression="&quot;Op&#231;&#227;o inv&#225;lida, retornando ao menu...&quot;" newline="True"/>
+                            <call expression="Menu"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
