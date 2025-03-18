@@ -36,7 +36,7 @@ Professor Pedro Girotto – Esclareceu diversas dúvidas durante o desenvolvimen
 
 - Diálogo com o ChatGPT sobre o sorteio de jogadores:
 
-Usuário: Ajude-me a gerar uma conta no Flowgorithm para sorteio de jogador 1 ou 2, agradeço.
+" Usuário: Ajude-me a gerar uma conta no Flowgorithm para sorteio de jogador 1 ou 2, agradeço.
 
 ChatGPT: Você pode usar a função Random(2) + 1 para sortear entre dois jogadores no Flowgorithm.
 
@@ -50,9 +50,9 @@ Como funciona?
 
 Random(2) gera um número aleatório entre 0 e 1.
 
-Somamos 1 para transformar o resultado em 1 ou 2, correspondendo aos jogadores.
+Somamos 1 para transformar o resultado em 1 ou 2, correspondendo aos jogadores. 
 
-Dessa forma, o sorteio será sempre justo entre os dois jogadores.
+Dessa forma, o sorteio será sempre justo entre os dois jogadores.🎲🔥 "
 
 # Licença
 
