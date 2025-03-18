@@ -16,7 +16,7 @@ Baixar o arquivo do programa no formato .fprg.
 
 Baixe e abra o arquivo no Flowgorithm.
 
-Inicie o programa clicando no botão de execução (ver imagem abaixo).(Imagem ilustrativa aqui)
+Inicie o programa clicando no botão de execução. 
 
 Siga os comandos interativos digitando os números solicitados.
 
