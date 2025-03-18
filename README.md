@@ -1,5 +1,4 @@
 # Trabalho-CESUPA-Algoritmo
- Flowgorithm MiniGames
 
 # Propósito
 
