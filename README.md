@@ -32,9 +32,9 @@ Caso ocorra um erro, o programa pode redirecionar para o menu ou reiniciar o jog
 
 Professor Pedro Girotto – Esclareceu diversas dúvidas durante o desenvolvimento.
 
-ChatGPT – Auxiliou na solução de problemas específicos.
+- ChatGPT – Auxiliou na solução de problemas específicos.
 
-Diálogo com o ChatGPT sobre o sorteio de jogadores:
+- Diálogo com o ChatGPT sobre o sorteio de jogadores:
 
 Usuário: Ajude-me a gerar uma conta no Flowgorithm para sorteio de jogador 1 ou 2, agradeço.
 
