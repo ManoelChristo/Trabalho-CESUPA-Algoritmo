@@ -1,7 +1,7 @@
 # Trabalho-CESUPA-Algoritmo
  Flowgorithm MiniGames
 
-Propósito
+# Propósito
 
 Este projeto é um trabalho acadêmico da disciplina de Algoritmos, ministrada pelo professor Pedro Girotto na instituição CESUPA. Seu propósito é estritamente educacional, servindo como prática de lógica de programação utilizando Flowgorithm.
 
